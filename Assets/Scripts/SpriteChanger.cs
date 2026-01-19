@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class SpriteChanger : MonoBehaviour
 {
 
     public SpriteRenderer spriteRenderer;
     public Color col;
-    public Sprite[] barrels = new Sprite[3];
-
-    public int randomNumber = 0;
+    public List<Sprite> barrels;
+    private int randomNumber = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +23,12 @@ public class SpriteChanger : MonoBehaviour
         if (Keyboard.current.anyKey.wasPressedThisFrame == true)
         {
             //PickARandomColor();
-            PickARandomSprite();
+
+            if (barrels.Count > 0)
+            {
+                PickARandomSprite();
+
+            }
         }
 
         //get the mouse position
@@ -39,6 +44,13 @@ public class SpriteChanger : MonoBehaviour
             //N: set the color to white
             spriteRenderer.color = Color.white;
         }
+
+        if (Mouse.current.leftButton.wasPressedThisFrame == true && barrels.Count > 0) 
+        {
+            barrels.RemoveAt(0);
+        
+        }
+
     }
 
     void PickARandomColor()
@@ -49,21 +61,7 @@ public class SpriteChanger : MonoBehaviour
     void PickARandomSprite() 
     {
         //pick a random number
-        randomNumber = Random.Range(0, barrels.Length);
-        ////assign that sprite
-        //if (randomNumber == 0)
-        //{
-        //    spriteRenderer.sprite = barrel0;
-        //}
-        //else if (randomNumber == 1)
-        //{
-        //    spriteRenderer.sprite = barrel1;
-        //}
-        //else if (randomNumber == 2)
-        //{
-        //    spriteRenderer.sprite = barrel2;
-        //}   
-
+        randomNumber = Random.Range(0, barrels.Count);
         spriteRenderer.sprite = barrels[randomNumber];
     }
 
