@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07116f6c63fde744bb55345004cf6626
+guid: 510a13c9dcc06fd49a071d76f270760c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iStock-1443562748_0
+      name: iStock-1443562748 1_0
       rect:
         serializedVersion: 2
-        x: 533
-        y: 576
-        width: 331
-        height: 342
+        x: 58
+        y: 77
+        width: 805
+        height: 841
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b17c28a279b92304ca4b0e2964767c28
-      internalID: 7993153539049148306
+      spriteID: 45ebfccf347d097488fd71917f2ab4af
+      internalID: 345380928
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      iStock-1443562748_0: 7993153539049148306
+      iStock-1443562748 1_0: 345380928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
